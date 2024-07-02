@@ -1,31 +1,37 @@
 [
     {
         "id": 1,
-        "name": "Kuch bhi",
-        "image": "875420_2970.jpg"
+        "name": "Men's Trouser",
+        "image": "man-wearing-brown-pants-close-up.jpg"
     },
     {
         "id":2,
-        "name": "Aayein",
-        "image" : "73604377_13.jpg"
+        "name": "Women Trouser",
+        "image" : "102139.jpg"
     },
     {
         "id": 3,
-        "name": "Huehuehue",
-        "image": "32490693_29092211.jpg"
+        "name": "Men's Shoes",
+        "image": "4430978_3191.jpg"
     },
     {
         "id": 4,
-        "name": "owwowowowowow",
-        "image": "24549910_6975750.jpg"
+        "name": "Women shoes",
+        "image": "6442.jpg"
     },
     {
         "id": 5,
-        "name": "UWUW",
-        "image" : "875420_2970.jpg"
-    },{
+        "name": "Analog Watch",
+        "image" : "9071923_186.jpg"
+    },
+    {
         "id":6,
-        "name": "Kya baat hai",
-        "image":"875420_2970.jpg"
+        "name": "Digital Watch",
+        "image":"2151039316.jpg"
+    },
+    {
+        "id":7,
+        "name":"White t-shirt",
+        "image":"79561923_White T-shirt on transparent background.jpg"
     }
 ]

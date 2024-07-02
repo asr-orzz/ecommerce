@@ -1,9 +1,9 @@
-import productsData from "../../data/products.json";
 import "./Products.css"
-function Products({addtocart}) {
+
+function Products({addtocart,products}) {
     return (
         <div className="products-container">
-            {productsData.map((product) => (
+            {products.map((product) => (
                 <div key={product.id} className="product">
                     <div className="product-image">
                         <img src={require(`../../assets/${product.image}`)} alt={product.name} />

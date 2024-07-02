@@ -7,7 +7,7 @@ function Cart({show, closeCart,cartitems,incqty,decqty}) {
      }
   return (
     <div className="backdrop" onClick={closeCart}>   
-       <div className="modal">
+
             <Modal show={show} >    
                 <h3>Cart</h3>
                 {cartitems.length>0 ? cartitems.map(item=> 
@@ -34,7 +34,6 @@ function Cart({show, closeCart,cartitems,incqty,decqty}) {
                     Close
                 </button>
             </Modal>
-        </div> 
     </div> 
   );
 }
