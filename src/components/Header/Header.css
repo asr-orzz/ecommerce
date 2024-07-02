@@ -1,0 +1,46 @@
+/* Header.css */
+
+/* Style for the header container */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f9fa; /* Light grey background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow for a 3D effect */
+  }
+  
+  /* Style for the header title */
+  .header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333; /* Dark grey text */
+  }
+  
+  /* Container for the cart section */
+  .cart {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Style for the cart button */
+  .cart-button {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    outline: none; /* Remove default outline */
+  }
+  
+  .cart-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+  
+  .cart-button:focus {
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5); /* Outline on focus for accessibility */
+  }
+  

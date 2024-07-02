@@ -1,0 +1,147 @@
+/* Cart.css */
+
+/* Backdrop for overlay */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Modal container styling */
+.modal {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 90%;
+  width: 400px;
+  max-height: 80%;
+  overflow-y: auto; /* Enable vertical scrollbar */
+}
+
+/* Modal heading */
+.modal h3 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Each cart item */
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Image styling for each item */
+.item-image img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Item name styling */
+.item-name {
+  flex: 1;
+  margin-left: 10px;
+  font-size: 16px;
+  color: #555;
+}
+
+/* Quantity text styling */
+.quantity {
+  margin-right: 10px;
+  font-size: 14px;
+  color: #777;
+}
+
+/* Increment and Decrement buttons */
+.indecbuttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.indecbuttons button {
+  padding: 5px;
+  margin: 2px 0;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.indecbuttons button:hover {
+  background-color: #e0e0e0;
+}
+
+/* Styling for Checkout button */
+.checkout {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #28a745;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.checkout:hover {
+  background-color: #218838;
+}
+
+/* Styling for Close button */
+.Close {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #dc3545;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.Close:hover {
+  background-color: #c82333;
+}
+
+/* Styling for empty cart message */
+.empyty-cart {
+  font-size: 18px;
+  color: #999;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Scrollbar styling for modal content */
+.modal::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+.modal::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
