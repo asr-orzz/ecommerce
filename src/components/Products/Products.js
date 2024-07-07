@@ -1,21 +1,25 @@
 import AppContext from "../../store/app-context";
 import "./Products.css"
+import Loader from "../UI/Loader";
 import { useContext } from "react";
 function Products() {
 
-    const {product,add}=useContext(AppContext);
-
+    const {product,add,loading}=useContext(AppContext);
+    
+    if(loading){
+        return (<Loader/>);
+    }
     return (
         <div className="products-container">
-            {product.map((product) => (
-                <div key={product.id} className="product">
+            {Object.keys(product).map((k) => (
+                <div key={k} className="product">
                     <div className="product-image">
-                        <img src={require(`../../assets/${product.image}`)} alt={product.name} />
+                        <img src={require(`../../assets/${product[k].image}`)} alt={product[k].name} />
                     </div>
                     <div className="product-name">
-                        {product.name}
+                        {product[k].name}
                     </div>
-                    <button className="add-to-cart" onClick={()=>add(product.id,product.name,product.image)}>
+                    <button className="add-to-cart" onClick={()=>add(product[k].id,product[k].name,product[k].image)}>
                         Add to Cart
                     </button>
                 </div>
