@@ -1,17 +1,21 @@
+import AppContext from "../../store/app-context";
 import Modal from "../Modals/Modal";
 import "./Cart.css"
+import { useContext } from "react";
 
-function Cart({show, closeCart,cartitems,incqty,decqty}) {
-    if (!show) {
-        return null; // Return null if show is false, meaning the modal won't render
-     }
+function Cart() {
+    const {showCart,incqty,decqty,closeCart,cart}=useContext(AppContext);
+
+    if (!showCart) {
+        return null; 
+    }
+
   return (
     <div className="backdrop" onClick={closeCart}>   
-
-            <Modal show={show} >    
+            <Modal show={showCart} >    
                 <h3>Cart</h3>
-                {cartitems.length>0 ? cartitems.map(item=> 
-                    <div className="cart-item" key={cartitems.id}>
+                {cart.length>0 ? cart.map(item=> 
+                    <div className="cart-item" key={cart.id}>
                         <div className="item-image">
                              <img src={require(`../../assets/${item.image}`)} alt={item.name} />
                         </div>
@@ -27,7 +31,7 @@ function Cart({show, closeCart,cartitems,incqty,decqty}) {
                         </div>
                     </div>
                 ) : <div className="empyty-cart">Cart is Empty</div>}
-                {cartitems.length>0 && <button className="checkout" onClick={closeCart}>
+                {cart.length>0 && <button className="checkout" onClick={closeCart}>
                     Checkout
                 </button>}
                 <button className="Close" onClick={closeCart}>

@@ -1,9 +1,13 @@
+import AppContext from "../../store/app-context";
 import "./Products.css"
+import { useContext } from "react";
+function Products() {
 
-function Products({addtocart,products}) {
+    const {product,add}=useContext(AppContext);
+
     return (
         <div className="products-container">
-            {products.map((product) => (
+            {product.map((product) => (
                 <div key={product.id} className="product">
                     <div className="product-image">
                         <img src={require(`../../assets/${product.image}`)} alt={product.name} />
@@ -11,7 +15,7 @@ function Products({addtocart,products}) {
                     <div className="product-name">
                         {product.name}
                     </div>
-                    <button className="add-to-cart" onClick={()=>addtocart(product.id,product.name,product.image)}>
+                    <button className="add-to-cart" onClick={()=>add(product.id,product.name,product.image)}>
                         Add to Cart
                     </button>
                 </div>
