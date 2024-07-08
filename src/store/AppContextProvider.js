@@ -70,7 +70,7 @@ const AppContextProvider = ({children}) => {
 
   const sendpost=async(update)=>{
 
-    const response=fetch("https://react-post-c7173-default-rtdb.firebaseio.com/products.json",{
+    const response=fetch("apiendpoint/json",{
       method: "POST",
       headers:{
         "Content-Type":"application/json"
@@ -102,7 +102,7 @@ const AppContextProvider = ({children}) => {
     const fetchProducts = async () => {
       try {
         setloading(true);
-        const response = await fetch("https://react-post-c7173-default-rtdb.firebaseio.com/products.json");
+        const response = await fetch("apiendpoint/json");
         if (!response.ok) {
           throw new Error("Failed to fetch products");
         }
